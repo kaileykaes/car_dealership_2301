@@ -10,7 +10,8 @@ RSpec.describe Dealership do
 
   xit 'has an inventory' do 
     dealership = Dealership.new("Acme Auto", "123 Main Street")
-
+  
     expect(dealership.inventory).to eq([])
   end
+end
 

@@ -14,7 +14,7 @@ class Car
   end
 
   def model
-    make_model.split(' ').pop
+    make_model.split(' ')[1]
   end
 
   def total_cost

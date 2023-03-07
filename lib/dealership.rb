@@ -50,5 +50,12 @@ class Dealership
   def cars_sorted_by_price
     inventory.sort_by{|car| car.total_cost}
   end
-  
+
+  def inventory_hash 
+    makes_cars = Hash.new {|hash_obj, key| hash_obj[key] = []}
+    inventory.each do |car|
+      makes_cars[car.make] << car 
+    end
+    makes_cars
+  end
 end 

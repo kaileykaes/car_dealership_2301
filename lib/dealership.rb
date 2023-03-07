@@ -46,4 +46,8 @@ class Dealership
     average = total_value / inventory_count
     average.to_s.insert(2, ',')
   end
+
+  def cars_sorted_by_price
+    inventory.sort_by{|car| car.total_cost}
+  end
 end 

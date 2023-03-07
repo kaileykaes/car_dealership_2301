@@ -36,9 +36,14 @@ class Dealership
   end
 
   def details
-    hash_deets = Hash.new
-    hash_deets["total_value"] = total_value
-    hash_deets["address"] = @address
-    hash_deets
+    dealership_deets = {}
+    dealership_deets["total_value"] = total_value
+    dealership_deets["address"] = @address
+    dealership_deets
+  end
+
+  def average_price_of_car
+    average = total_value / inventory_count
+    average.to_s.insert(2, ',')
   end
 end 
